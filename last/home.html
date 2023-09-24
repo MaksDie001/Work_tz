@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TNFT.RU</title>
+    <link rel="stylesheet" type="text/css" href="RESET.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap-grid.css">
+    <link rel="stylesheet" type="text/css" href="home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Istok+Web:wght@700&family=Rubik:wght@300&display=swap" rel="stylesheet">
+</head>
+<body >
+<div class="back_based">
+    <nav class="row menu">
+        <div class=" col-4"><img src="img/лого.png" class="logo"></div>
+        <div class=" col-8"><span class="search_fist">
+                <form class="loop_form">
+                    <span class="loop_input">
+                    <input placeholder="Поиск..." type="text" onfocus="drop_script()" class="loop_input_text">
+                    <img src="img/loop.png" class="loop">
+                    </span>
+                    <ul class="drop_search">
+                        <li><img src="img/Rectangle%20124.png"><strong>Анастасия Ивлеева</strong></li>
+                        <li><img src="img/Rectangle%20124.png"><strong>Анастасия Ивлеева</strong></li>
+                        <li><img src="img/Rectangle%20124.png"><strong>Анастасия Ивлеева</strong></li>
+                    </ul>
+                </form>
+
+        </span>
+        </div>
+        <span class="burger_menu">
+            <button class="hm_button" onclick="hm_script()"><img src="img/hamburger-menu-svgrepo-com.svg" class="hm_menu"></button>
+
+            <ul class="hm_ul">
+                <li><a href="/">Войти</a></li>
+                <li><a href="/">Регистрация</a></li>
+            </ul>
+        </span>
+    </nav>
+
+    <div class="row menu_two">
+        <span style="position: relative " class="col-4">
+            <span class="filter_span">
+        <button class="filter_button" onclick="filter_triger_script()">филтры</button><img src="img/Polygon%201.png" class="filter_polygon">
+            </span>
+            <div class="filter_list">
+                <ul class="filter_ul">
+                    <form class="filter_form">
+                    <li class="range_li"><div>Цена</div><img src="img/Line%2061.svg" class="filter_decor">
+                        <input type="range" min="500" max="1000000" name="volume" id="volume" class="filter_range" value="500" onchange="filter_script()">
+                        <img src="Polygon%202.svg" id="Polygon2"><img src="img/Polygon%203.svg" id="Poligon3">
+                        <span class="row"><pre class="filter_first_pre col-4">500 ₽</pre><pre class="col-4 result"><p>500 ₽</p></pre><pre class="filter_last_pre col-4">1000000 ₽</pre></span>
+                    </li>
+                    <li><span class="filter_list_first_span"><h2>Категорий</h2><img src="img/Line%2061.svg" class="filter_decor"></span>
+                    <ul>
+                        <li><label><input type="checkbox" class="filter_checbox" /><p class="filter_list_text">Премиум</p><span class="check_h"></span></label></li>
+                        <li><label><input type="checkbox" class="filter_checbox" /><p class="filter_list_text">Искуство</p><span class="check_h"></span></label></li>
+                        <li><label><input type="checkbox" class="filter_checbox" /><p class="filter_list_text">Знаменитости</p><span class="check_h"></span></label></li>
+                        <li><label><input type="checkbox" class="filter_checbox" /><p class="filter_list_text">Киберспорт</p><span class="check_h"></span></label></li>
+                        <li><label><input type="checkbox" class="filter_checbox" /><p class="filter_list_text">Благотворительность</p><span class="check_h"></span></label></li>
+                    </ul>
+                    </li>
+                    <li><span class="filter_list_first_span"><h2>Типы файлов</h2><img src="img/Line%2061.svg" class="filter_decor"></span>
+                    <ul>
+                        <li><label><input type="checkbox" class="filter_checbox" /><p class="filter_list_text">изображение</p><span class="check_h"></span></label></li>
+                        <li><label><input type="checkbox" class="filter_checbox" /><p class="filter_list_text">Видео</p><span class="check_h"></span></label></li>
+                        <li><label><input type="checkbox" class="filter_checbox" /><p class="filter_list_text">Аудио</p><span class="check_h"></span></label></li>
+                    </ul></li>
+                    <li><span class="filter_list_first_span"><h2>Типы продаж</h2><img src="img/Line%2061.svg" class="filter_decor"></span>
+                     <ul>
+                        <li><label><input type="checkbox" class="filter_checbox" /><p class="filter_list_text">Фикс. цена</p><span class="check_h"></span></label></li>
+                        <li><label><input type="checkbox" class="filter_checbox" /><p class="filter_list_text">Аукцион активен</p><span class="check_h"></span></label></li>
+                    </ul></li>
+                    <li><span class="filter_list_first_span"><h2>Сеть NFT</h2><img src="img/Line%2061.svg" class="filter_decor"></span>
+                    <ul>
+                        <li><label><input type="checkbox" class="filter_checbox" /><p class="filter_list_text">ETH</p><span class="check_h"></span></label></li>
+                        <li><label><input type="checkbox" class="filter_checbox" /><p class="filter_list_text">BNB</p><span class="check_h"></span></label></li>
+                        <li><label><input type="checkbox" class="filter_checbox" /><p class="filter_list_text">USDC</p><span class="check_h"></span></label></li>
+                    </ul></li>
+                    <li><span class="filter_list_first_span"><h2>редкость</h2><img src="img/Line%2061.svg" class="filter_decor"></span>
+                    <ul>
+                        <li><label><input type="checkbox" class="filter_checbox" /><p class="filter_list_text">Уникальная</p><span class="check_h"></span></label></li>
+                        <li><label><input type="checkbox" class="filter_checbox" /><p class="filter_list_text">Редкая</p><span class="check_h"></span></label></li>
+                        <li><label><input type="checkbox" class="filter_checbox" /><p class="filter_list_text">Эпическая</p><span class="check_h"></span></label></li>
+                    </ul></li>
+                        <button class="filter_list_button" onclick="filter_script()">Применить</button>
+                    </form>
+                </ul>
+            </div>
+        </span>
+        <div class="col-6">
+            <form>
+            <span class="loop_input loop_input_two">
+            <input class="loop_input_text loop_input_text_two " placeholder="Поиск...">
+            <img src="img/loop.png" class="loop loop_two">
+            </span>
+            </form>
+        </div>
+        <div class="col-2">
+            <span style="position: relative" onclick="select_script()" class="select_span">
+             <img src="img/Vector.png" class="options_img">
+             <button class="options_select"><pre>По умолчанию</pre></button>
+                 <ul class="select_list">
+                 <li onclick="select_text('По умолчанию')"><pre>По умолчанию</pre></li>
+                 <li onclick="select_text('По дате')">По дате</li>
+                 <li onclick="select_text('Дешевле')">Дешевле</li>
+                 <li onclick="select_text('Дороже')">Дороже</li>
+                 <li onclick="select_text('По популярности')"><pre>По популярности</pre></li>
+                 </ul>
+            </span>
+
+        </div>
+    </div>
+    <div class="content row">
+        <div class="col-3 content_div"><span class="content_span"><img src="img/фотка.png" class="big_img">
+        <strong class="first_strong">Без слов</strong>
+            <img src="img/маленькая%20фотка%20звезды.png" class="mini_img">
+            <strong class="two_strong">Настя Ивлеева Вячеславовна</strong>
+            <span class="content_span_two">
+            <strong class="three_strong">Редкость:</strong><p class="content_border_p">уникальная</p></span>
+            <span class="content_span_two content_span_three">
+            <strong class="three_strong">Цена:</strong><p class="content_border_p content_border_p_two">от 500 ₽</p></span>
+            <a>Купить</a>
+        </span></div>
+        <div class="col-3 content_div"><span class="content_span"><img src="img/фотка.png" class="big_img">
+        <strong class="first_strong">Без слов</strong>
+            <img src="img/маленькая%20фотка%20звезды.png" class="mini_img">
+            <strong class="two_strong">Настя Ивлеева Вячеславовна</strong>
+            <span class="content_span_two">
+            <strong class="three_strong">Редкость:</strong><p class="content_border_p">уникальная</p></span>
+            <span class="content_span_two content_span_three">
+            <strong class="three_strong">Цена:</strong><p class="content_border_p content_border_p_two">от 500 ₽</p></span>
+            <a>Купить</a>
+        </span></div>
+        <div class="col-3 content_div"><span class="content_span"><img src="img/фотка.png" class="big_img">
+        <strong class="first_strong">Без слов</strong>
+            <img src="img/маленькая%20фотка%20звезды.png" class="mini_img">
+            <strong class="two_strong">Настя Ивлеева Вячеславовна</strong>
+            <span class="content_span_two">
+            <strong class="three_strong">Редкость:</strong><p class="content_border_p">уникальная</p></span>
+            <span class="content_span_two content_span_three">
+            <strong class="three_strong">Цена:</strong><p class="content_border_p content_border_p_two">от 500 ₽</p></span>
+            <a>Купить</a>
+        </span></div>
+    </div>
+    <div class="content row">
+        <div class="col-3 content_div"><span class="content_span"><img src="img/фотка.png" class="big_img">
+        <strong class="first_strong">Без слов</strong>
+            <img src="img/маленькая%20фотка%20звезды.png" class="mini_img">
+            <strong class="two_strong">Настя Ивлеева Вячеславовна</strong>
+            <span class="content_span_two">
+            <strong class="three_strong">Редкость:</strong><p class="content_border_p">уникальная</p></span>
+            <span class="content_span_two content_span_three">
+            <strong class="three_strong">Цена:</strong><p class="content_border_p content_border_p_two">от 500 ₽</p></span>
+            <a>Купить</a>
+        </span></div>
+        <div class="col-3 content_div"><span class="content_span"><img src="img/фотка.png" class="big_img">
+        <strong class="first_strong">Без слов</strong>
+            <img src="img/маленькая%20фотка%20звезды.png" class="mini_img">
+            <strong class="two_strong">Настя Ивлеева Вячеславовна</strong>
+            <span class="content_span_two">
+            <strong class="three_strong">Редкость:</strong><p class="content_border_p">уникальная</p></span>
+            <span class="content_span_two content_span_three">
+            <strong class="three_strong">Цена:</strong><p class="content_border_p content_border_p_two">от 500 ₽</p></span>
+            <a>Купить</a>
+        </span></div>
+        <div class="col-3 content_div"><span class="content_span"><img src="img/фотка.png" class="big_img">
+        <strong class="first_strong">Без слов</strong>
+            <img src="img/маленькая%20фотка%20звезды.png" class="mini_img">
+            <strong class="two_strong">Настя Ивлеева Вячеславовна</strong>
+            <span class="content_span_two">
+            <strong class="three_strong">Редкость:</strong><p class="content_border_p">уникальная</p></span>
+            <span class="content_span_two content_span_three">
+            <strong class="three_strong">Цена:</strong><p class="content_border_p content_border_p_two">от 500 ₽</p></span>
+            <a>Купить</a>
+        </span></div>
+    </div>
+    <div class="content row">
+        <div class="col-3 content_div"><span class="content_span"><img src="img/фотка.png" class="big_img">
+        <strong class="first_strong">Без слов</strong>
+            <img src="img/маленькая%20фотка%20звезды.png" class="mini_img">
+            <strong class="two_strong">Настя Ивлеева Вячеславовна</strong>
+            <span class="content_span_two">
+            <strong class="three_strong">Редкость:</strong><p class="content_border_p">уникальная</p></span>
+            <span class="content_span_two content_span_three">
+            <strong class="three_strong">Цена:</strong><p class="content_border_p content_border_p_two">от 500 ₽</p></span>
+            <a>Купить</a>
+        </span></div>
+        <div class="col-3 content_div"><span class="content_span"><img src="img/фотка.png" class="big_img">
+        <strong class="first_strong">Без слов</strong>
+            <img src="img/маленькая%20фотка%20звезды.png" class="mini_img">
+            <strong class="two_strong">Настя Ивлеева Вячеславовна</strong>
+            <span class="content_span_two">
+            <strong class="three_strong">Редкость:</strong><p class="content_border_p">уникальная</p></span>
+            <span class="content_span_two content_span_three">
+            <strong class="three_strong">Цена:</strong><p class="content_border_p content_border_p_two">от 500 ₽</p></span>
+            <a>Купить</a>
+        </span></div>
+        <div class="col-3 content_div"><span class="content_span"><img src="img/фотка.png" class="big_img">
+        <strong class="first_strong">Без слов</strong>
+            <img src="img/маленькая%20фотка%20звезды.png" class="mini_img">
+            <strong class="two_strong">Настя Ивлеева Вячеславовна</strong>
+            <span class="content_span_two">
+            <strong class="three_strong">Редкость:</strong><p class="content_border_p">уникальная</p></span>
+            <span class="content_span_two content_span_three">
+            <strong class="three_strong">Цена:</strong><p class="content_border_p content_border_p_two">от 500 ₽</p></span>
+            <a>Купить</a>
+        </span></div>
+    </div>
+    <div class="content row">
+        <div class="col-3 content_div"><span class="content_span"><img src="img/фотка.png" class="big_img">
+        <strong class="first_strong">Без слов</strong>
+            <img src="img/маленькая%20фотка%20звезды.png" class="mini_img">
+            <strong class="two_strong">Настя Ивлеева Вячеславовна</strong>
+            <span class="content_span_two">
+            <strong class="three_strong">Редкость:</strong><p class="content_border_p">уникальная</p></span>
+            <span class="content_span_two content_span_three">
+            <strong class="three_strong">Цена:</strong><p class="content_border_p content_border_p_two">от 500 ₽</p></span>
+            <a>Купить</a>
+        </span></div>
+        <div class="col-3 content_div"><span class="content_span"><img src="img/фотка.png" class="big_img">
+        <strong class="first_strong">Без слов</strong>
+            <img src="img/маленькая%20фотка%20звезды.png" class="mini_img">
+            <strong class="two_strong">Настя Ивлеева Вячеславовна</strong>
+            <span class="content_span_two">
+            <strong class="three_strong">Редкость:</strong><p class="content_border_p">уникальная</p></span>
+            <span class="content_span_two content_span_three">
+            <strong class="three_strong">Цена:</strong><p class="content_border_p content_border_p_two">от 500 ₽</p></span>
+            <a>Купить</a>
+        </span></div>
+        <div class="col-3 content_div"><span class="content_span"><img src="img/фотка.png" class="big_img">
+        <strong class="first_strong">Без слов</strong>
+            <img src="img/маленькая%20фотка%20звезды.png" class="mini_img">
+            <strong class="two_strong">Настя Ивлеева Вячеславовна</strong>
+            <span class="content_span_two">
+            <strong class="three_strong">Редкость:</strong><p class="content_border_p">уникальная</p></span>
+            <span class="content_span_two content_span_three">
+            <strong class="three_strong">Цена:</strong><p class="content_border_p content_border_p_two">от 500 ₽</p></span>
+            <a>Купить</a>
+        </span></div>
+    </div>
+    <div class="content row">
+        <div class="col-3 content_div"><span class="content_span"><img src="img/фотка.png" class="big_img">
+        <strong class="first_strong">Без слов</strong>
+            <img src="img/маленькая%20фотка%20звезды.png" class="mini_img">
+            <strong class="two_strong">Настя Ивлеева Вячеславовна</strong>
+            <span class="content_span_two">
+            <strong class="three_strong">Редкость:</strong><p class="content_border_p">уникальная</p></span>
+            <span class="content_span_two content_span_three">
+            <strong class="three_strong">Цена:</strong><p class="content_border_p content_border_p_two">от 500 ₽</p></span>
+            <a>Купить</a>
+        </span></div>
+        <div class="col-3 content_div"><span class="content_span"><img src="img/фотка.png" class="big_img">
+        <strong class="first_strong">Без слов</strong>
+            <img src="img/маленькая%20фотка%20звезды.png" class="mini_img">
+            <strong class="two_strong">Настя Ивлеева Вячеславовна</strong>
+            <span class="content_span_two">
+            <strong class="three_strong">Редкость:</strong><p class="content_border_p">уникальная</p></span>
+            <span class="content_span_two content_span_three">
+            <strong class="three_strong">Цена:</strong><p class="content_border_p content_border_p_two">от 500 ₽</p></span>
+            <a>Купить</a>
+        </span></div>
+        <div class="col-3 content_div"><span class="content_span"><img src="img/фотка.png" class="big_img">
+        <strong class="first_strong">Без слов</strong>
+            <img src="img/маленькая%20фотка%20звезды.png" class="mini_img">
+            <strong class="two_strong">Настя Ивлеева Вячеславовна</strong>
+            <span class="content_span_two">
+            <strong class="three_strong">Редкость:</strong><p class="content_border_p">уникальная</p></span>
+            <span class="content_span_two content_span_three">
+            <strong class="three_strong">Цена:</strong><p class="content_border_p content_border_p_two">от 500 ₽</p></span>
+            <a>Купить</a>
+        </span></div>
+    </div>
+    <div class="content row">
+        <div class="col-3 content_div"><span class="content_span"><img src="img/фотка.png" class="big_img">
+        <strong class="first_strong">Без слов</strong>
+            <img src="img/маленькая%20фотка%20звезды.png" class="mini_img">
+            <strong class="two_strong">Настя Ивлеева Вячеславовна</strong>
+            <span class="content_span_two">
+            <strong class="three_strong">Редкость:</strong><p class="content_border_p">уникальная</p></span>
+            <span class="content_span_two content_span_three">
+            <strong class="three_strong">Цена:</strong><p class="content_border_p content_border_p_two">от 500 ₽</p></span>
+            <a>Купить</a>
+        </span></div>
+        <div class="col-3 content_div"><span class="content_span"><img src="img/фотка.png" class="big_img">
+        <strong class="first_strong">Без слов</strong>
+            <img src="img/маленькая%20фотка%20звезды.png" class="mini_img">
+            <strong class="two_strong">Настя Ивлеева Вячеславовна</strong>
+            <span class="content_span_two">
+            <strong class="three_strong">Редкость:</strong><p class="content_border_p">уникальная</p></span>
+            <span class="content_span_two content_span_three">
+            <strong class="three_strong">Цена:</strong><p class="content_border_p content_border_p_two">от 500 ₽</p></span>
+            <a>Купить</a>
+        </span></div>
+        <div class="col-3 content_div"><span class="content_span"><img src="img/фотка.png" class="big_img">
+        <strong class="first_strong">Без слов</strong>
+            <img src="img/маленькая%20фотка%20звезды.png" class="mini_img">
+            <strong class="two_strong">Настя Ивлеева Вячеславовна</strong>
+            <span class="content_span_two">
+            <strong class="three_strong">Редкость:</strong><p class="content_border_p">уникальная</p></span>
+            <span class="content_span_two content_span_three">
+            <strong class="three_strong">Цена:</strong><p class="content_border_p content_border_p_two">от 500 ₽</p></span>
+            <a>Купить</a>
+        </span></div>
+    </div>
+    <span class=pagination>«<p class="pagination_nav">1</p><span class="pagination_list">2</span><span class="pagination_list">3</span><span class="pagination_list">4</span>»</span>
+
+</div>
+<div class="information ">
+    <div class="info_max row">
+    <span class="col-4 NFT">
+        <p class="nft_first first">NFT</p>
+        <a href="/" class="two">Что такое NFT</a>
+        <a href="/" class="two">Создайте NFT с нами</a>
+        <img src="img/twitter-3%201.svg"> <img src="img/vk.svg">
+    </span>
+    <span class="col-4 cop">
+        <p class="cop_first first">Компания</p>
+        <a href="/" class="two">О нас</a>
+        <a href="/" class="two">Отправить запрос</a>
+    </span>
+    <span class="col-4 other">
+        <p class="other_first first">Другое</p>
+        <a href="/" class="two">Условия использования</a>
+        <a href="/" class="two">Политика конфиденциальности</a>
+    </span><img src="img/Vector%202%201.svg" class="star_img"><img src="img/Line%209.svg" class="line_9">
+    </div>
+    <span class="finish">@ tnft.ru Company, Inc</span>
+
+</div>
+<script src="home.js"></script>
+</body>
+</html>

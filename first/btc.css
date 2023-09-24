@@ -1,0 +1,29 @@
+ul {
+    list-style: none;
+}
+ul li{
+    margin-bottom: 8px;
+}
+span{
+    margin-right: 5px;
+    font-size: 22px;
+    font-family: "Roboto Light";
+}
+.red_span{
+    color: rgb(220,12,12);
+}
+.yellow_span{
+    color: rgb(200,200,0);
+}
+.purpur_span{
+    color: #a900ff;
+}
+.blue_back_span{
+    background: rgb(12,12,200);
+}
+.green_back_span{
+    background: rgb(12,250,12);
+}
+.white_span{
+    color: #ffffff;
+}
